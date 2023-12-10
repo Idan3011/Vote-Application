@@ -50,17 +50,17 @@ const AppNavBar = () => {
               }
               id="navbarScrollingDropdown"
             >
-              <NavDropdown.Item href="/" onClick={handleLinkClick}>
+            <NavLink to={'/'}  ><NavDropdown.Item href="/" onClick={handleLinkClick}>
                 LogOut
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/pages/Voting/Voting">
+              </NavDropdown.Item></NavLink>
+              <NavLink to="/pages/Voting/Voting"><NavDropdown.Item href="/pages/Voting/Voting">
                 Votes
-              </NavDropdown.Item>
+              </NavDropdown.Item></NavLink>
               <NavDropdown.Divider />
               {isAdmin ? (
-                <NavDropdown.Item href={"/pages/Admin/Admin"}>
-                  Admin
-                </NavDropdown.Item>
+               <NavLink to='/pages/Admin/Admin'> <NavDropdown.Item href={"/pages/Admin/Admin"}>
+               Admin
+             </NavDropdown.Item></NavLink>
               ) : null}
             </NavDropdown>
           </Nav>
