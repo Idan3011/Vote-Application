@@ -36,11 +36,11 @@ function App() {
             }
           >
             <Route
-              exact
+              
               path="/pages/Voting/Voting"
               element={<Voting userId={userId} />}
             />
-            <Route exact path="/pages/Admin/Admin" element={<Admin />} />
+            <Route  path="/pages/Admin/Admin" element={<Admin />} />
           </Route>
         </Routes>
       </Router>
