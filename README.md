@@ -16,3 +16,12 @@ The project leverages React.js for frontend development, Axios for efficient API
 - **Rendering Complexities:** Achieving real-time data updates and synchronizing information while maintaining a smooth user experience required careful handling and optimization.
 
 Despite encountering technical complexities, the primary goal was to develop an accessible and reliable food election system that addresses users' voting needs efficiently and securely.
+
+### link to live Demo
+- **Netlify:** https://lucky-pika-c9ec9e.netlify.app/
+-**Github:** https://github.com/Idan3011/Vote-Application;
+
+### Enter with user:
+
+**Admin** - email: idanrot20@gmail.com ; password: 1234
+**Regular User** - email:Gage_McKenzie@yahoo.com ; password: EjgOW5W7FRqZWVA

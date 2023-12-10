@@ -56,3 +56,12 @@
     color: #009879;
     
 }
+.canvas-container .canvas  {
+  box-sizing: border-box;
+  display: block;
+  height: 150px;
+  width: 300px;
+  margin-left: -2rem;
+  margin-top: 1rem;
+
+}

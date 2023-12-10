@@ -23,8 +23,10 @@ const Voting = ({ userId }) => {
         const response = await axios.get("/users");
         if (response.data) {
           const allUserVotes = response.data;
-          const aggregatedVotes = aggregateVotes(allUserVotes);
-          setVotes(aggregatedVotes);
+          const allUsersVoteCount = allUsersVoteArrayFunction(allUserVotes);
+          setVotes(allUsersVoteCount);
+          console.log(allUsersVoteCount);
+          
         }
       } catch (error) {
         console.error(error);
@@ -34,8 +36,16 @@ const Voting = ({ userId }) => {
     fetchAllUserVotes();
   }, [userId]);
 
-  const aggregateVotes = (allUserVotes) => {
-    const aggregatedVotes = {
+  useEffect(() => {
+    if (isVote === "true") {
+      setIsVote(true);
+      setConfirmVote(false);
+      setChangeVote(true);
+    }
+  }, [isVote]);
+
+  const allUsersVoteArrayFunction = (allUserVotes) => {
+    const allUsersVoteCount = {
       Hamburger: 0,
       Pizza: 0,
       Taco: 0,
@@ -45,15 +55,15 @@ const Voting = ({ userId }) => {
     allUserVotes.forEach((user) => {
       const userVotes = user.votes;
       Object.keys(userVotes).forEach((foodType) => {
-        aggregatedVotes[foodType] += userVotes[foodType];
+        allUsersVoteCount[foodType] += userVotes[foodType];
       });
     });
 
-    return aggregatedVotes;
+    return allUsersVoteCount;
   };
 
   const handleVote = async (index) => {
-    if (isVote || (confirmVote && votedIndex !== index)) return;
+    if (isVote) return;
 
     const updatedVotes = { ...votes };
 
@@ -67,6 +77,8 @@ const Voting = ({ userId }) => {
     setSelectedCard(index);
     setVotedIndex(index);
     setConfirmVote(true);
+    setIsVote(true);
+    setChangeVote(true);
 
     try {
       const response = await axios.put(`users/${userId}`, {
@@ -104,6 +116,8 @@ const Voting = ({ userId }) => {
     setConfirmVote(false);
     setVotedIndex(null);
     setSelectedCard(null);
+    setIsVote(false);
+    setChangeVote(false);
   };
 
   const changeVoting = (newVoteIndex) => {
@@ -112,15 +126,13 @@ const Voting = ({ userId }) => {
 
       updatedVotes[foodTypes[selectedCard].name]--;
 
-      updatedVotes[foodTypes[newVoteIndex].name]++;
-
       setVotes(updatedVotes);
       setIsVote(false);
       setChangeVote(false);
       setSelectedCard(newVoteIndex);
     }
   };
-
+  localStorage.setItem("totalVoteCount", votes);
   return (
     <div className="Voting page">
       <h1>Voting Page</h1>

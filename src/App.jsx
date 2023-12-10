@@ -10,36 +10,36 @@ import Admin from "./pages/Admin/Admin";
 import getUserData from "./component/localStorage/localStorage";
 
 function App() {
-  const { id } = getUserData(); 
-  const [userId, setUserId] = useState(id)
+  const { id } = getUserData();
+  const [userId, setUserId] = useState(id);
 
+  const handleLogin = (id) => {
+    setUserId(id);
+  };
 
-const handleLogin =(id)=>{
-  setUserId(id)
-}
-
- const handleLogOut = ()=>{
-  setUserId(null)
- }
- useEffect(()=>{
-  
- },[userId])
+  const handleLogOut = () => {
+    setUserId(null);
+  };
+  useEffect(() => {}, [userId]);
   return (
     <div className="App">
-      
       <Router>
         <Routes>
-        <Route exact path="/"  element={<Login handleLogin={handleLogin}/>}/>
-        <Route
-          element={
-            <>
-              <Navbar handleLogOut={handleLogOut}/>
-              <Outlet />
-            </>
-          }
-        >
-          <Route exact path="/pages/Voting/Voting" element={<Voting  userId={userId}/>} />
-          <Route exact path="/pages/Admin/Admin" element={<Admin />} />
+          <Route exact path="/" element={<Login handleLogin={handleLogin} />} />
+          <Route
+            element={
+              <>
+                <Navbar handleLogOut={handleLogOut} />
+                <Outlet />
+              </>
+            }
+          >
+            <Route
+              exact
+              path="/pages/Voting/Voting"
+              element={<Voting userId={userId} />}
+            />
+            <Route exact path="/pages/Admin/Admin" element={<Admin />} />
           </Route>
         </Routes>
       </Router>

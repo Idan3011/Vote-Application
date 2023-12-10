@@ -8,11 +8,12 @@ import getUserData from "../localStorage/localStorage";
 const Navbar = ({handleLogOut}) => {
   const { user, isVote } = getUserData(); 
   const [isAdmin, setIsAdmin] = useState(false);
+  console.log(isVote);
   
   useEffect(() => {
     const userData = getUserData();
     setIsAdmin(userData.isAdmin === 'true'); 
-  }, []);
+  }, [isVote]);
 
   const handleLinkClick = (pageName) => {
     if (pageName === 'LogOut') {
