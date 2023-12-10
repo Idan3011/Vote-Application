@@ -1,8 +1,9 @@
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect} from "react";
 import "../Admin/Admin.css";
 import axios from "../../apiConfig";
 import VoteChart from "../../component/Chart/Chart";
+import Spinner from "../../component/Spinner/Spinner";
 
 const Admin = () => {
   const [data, setData] = useState([]);
@@ -21,15 +22,13 @@ const Admin = () => {
           const allUserVotes = response.data;
           const allUsersVoteCount = allUsersVoteArrayFunction(allUserVotes);
           setVotes(allUsersVoteCount);
-  
-          
         }
       } catch (error) {
         console.error(error);
       }
     };
 
-    fetchAllUserVotes()
+    fetchAllUserVotes();
   }, []);
   const allUsersVoteArrayFunction = (allUserVotes) => {
     const allUsersVoteCount = {
@@ -49,42 +48,46 @@ const Admin = () => {
     return allUsersVoteCount;
   };
 
-
   const fetchUser = async () => {
     const response = await axios.get("/users");
     setTimeout(() => {
       setData(response.data);
-    }, 1000);
+    }, 3000);
   };
-  
+
   useEffect(() => {
     fetchUser();
-    
   }, [data]);
   return (
     <div className="Admin page">
       <h1>Admin Control</h1>
       <div className="admin-util-container">
+          {data ? 
         <table>
-          {data?.map((user, index) => {
-            return (
-              <tbody key={index}>
-              <tr >
-                <td className={user.isVote ? "active" : null}>{user.name}</td>
-                <td className={user.isVote ? "active" : null}>{user.email}</td>
-                <td className={user.isVote ? "active" : null}>
-                  {user.isVote ? "Voted" : "Not Voted"}
-                </td>
-              </tr>
-              </tbody>
-            );
-          })}
-        </table>
-       
+            {data.map((user, index) => {
+              return (
+                <tbody key={index}>
+                  <tr>
+                    <td className={user.isVote ? "active" : null}>
+                      {user.name}
+                    </td>
+                    <td className={user.isVote ? "active" : null}>
+                      {user.email}
+                    </td>
+                    <td className={user.isVote ? "active" : null}>
+                      {user.isVote ? "Voted" : "Not Voted"}
+                    </td>
+                  </tr>
+                </tbody>
+              );
+            })
+          }
+        </table>:<Spinner />}
+
       </div>
-     <div className="canvas-container">
-     <VoteChart votes={votes}/>
-     </div>
+      <div className="canvas-container">
+        <VoteChart votes={votes} />
+      </div>
     </div>
   );
 };

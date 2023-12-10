@@ -8,7 +8,7 @@ import getUserData from "../localStorage/localStorage";
 const Navbar = ({handleLogOut}) => {
   const { user, isVote } = getUserData(); 
   const [isAdmin, setIsAdmin] = useState(false);
-  console.log(isVote);
+  
   
   useEffect(() => {
     const userData = getUserData();
@@ -51,4 +51,3 @@ const Navbar = ({handleLogOut}) => {
 };
 
 export default Navbar;
-

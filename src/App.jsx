@@ -8,7 +8,7 @@ import Voting from "./pages/Voting/Voting";
 import Login from "./pages/Login/Login";
 import Admin from "./pages/Admin/Admin";
 import getUserData from "./component/localStorage/localStorage";
-
+import NavBar1 from "./component/NavBar1/NavBar1";
 function App() {
   const { id } = getUserData();
   const [userId, setUserId] = useState(id);
@@ -29,7 +29,8 @@ function App() {
           <Route
             element={
               <>
-                <Navbar handleLogOut={handleLogOut} />
+                {/* <Navbar handleLogOut={handleLogOut} /> */}
+                <NavBar1 />
                 <Outlet />
               </>
             }
