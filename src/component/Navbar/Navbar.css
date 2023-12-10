@@ -1,0 +1,61 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  background: #232229;
+  color: #f7f7f7f7;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 31%;
+  margin-right: 2rem;
+}
+
+.navbar ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  list-style: none;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  width: 4rem;
+  background: #2020b2;
+  text-align: center;
+  height: 2rem;
+  box-shadow: -1px 6px 10px 0px rgb(14 12 2);
+}
+
+.navbar ul li a {
+  color: #f7f7f7f7;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border: #232229;
+  border-radius: 0.5rem;
+}
+
+.navbar ul li :hover {
+  color: rgb(30, 28, 24);
+  transform: scale(1.1);
+}
+.navbar h3 {
+  margin-left: 3rem;
+  font-family: fantasy;
+  color: #f7f7f7f7;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+}
+
+.navbar h4 {
+  width: 13rem;
+  padding: 1rem;
+  font-size: 0.8rem;
+  font-family: "Lato";
+}

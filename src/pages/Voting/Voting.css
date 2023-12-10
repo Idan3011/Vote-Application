@@ -1,0 +1,98 @@
+.Voting {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cards-container ul {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  width: 100%;
+  height: 24rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-container .card-container {
+  width: 14rem;
+  height: 20rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  box-shadow: 0px 1px 4px 4px rgba(0, 0, 0, 0.2);
+  background: #f4f4ec87;
+  overflow: hidden;
+  padding-bottom: 2rem;
+  cursor: pointer;
+}
+.cards-container ul li {
+  list-style: none;
+}
+.cards-container ul li img {
+  width: 100%;
+  height: 13rem;
+  background: white;
+  border-bottom: 0.1rem solid red;
+  padding-top: 1rem;
+}
+.card-container h2 {
+  font-family: "Cabin Sketch", sans-serif;
+}
+.Voting h1 {
+  margin-top: 6rem;
+  letter-spacing: 0.3rem;
+  color: #261818;
+  text-decoration: underline;
+  font-family: "Cabin Sketch", sans-serif;
+}
+
+.card-container button {
+  width: 7rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: #d51111;
+  border: none;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;  
+  font-family: 'Lato';
+}
+
+.card-container button:hover {
+  transform: scale(1.1);
+  transform: translateY(0.1rem);
+}
+
+.card-container:hover {
+  transform: scale(1.1);
+}
+
+.card-container h5 {
+  position: fixed;
+  margin-right: -10rem;
+  margin-top: 0.3rem;
+  font-family: "Lato";
+
+}
+
+.btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.btn-container button {
+    width: 4rem;
+    height: 2rem;
+    font-family: 'Lato';
+}

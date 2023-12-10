@@ -1,0 +1,13 @@
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.button-container button {
+    width: 50%;
+    height: 50%;
+    width: 5rem;
+    height: 2rem;
+}
