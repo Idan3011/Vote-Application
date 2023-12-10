@@ -18,7 +18,9 @@ a.navbar-brand{
 div.dropdown-menu.show{
   margin-left: 40rem;
 }
-
+div.dropdown-menu.show a{
+    text-decoration: none;
+}
 a.dropdown-item:hover{
     background-color: black;
     color:#f7f7f7
@@ -42,4 +44,8 @@ a#navbarScrollingDropdown.dropdown-toggle.show.nav-link{
 a#navbarScrollingDropdown.dropdown-toggle.show.nav-link:hover{
     background-color: white;
     color:black;
+}
+
+a.active{
+    text-decoration: none;
 }
