@@ -1,0 +1,54 @@
+@media (max-width: 415px) {
+  div.form-container {
+    height: 36rem;
+    padding: 0px;
+  }
+  div.voting.page{
+    display: flex;
+    flex-direction: column;
+    min-height: 194vh;
+  }
+  div.cards-container ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 36rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+div.card-container h5 {
+  position: absolute;
+}
+div.offcanvas-body{
+  background: #a79d9d;
+    color: #f7f7f7f7;
+}
+div.offcanvas-header button.btn-close{
+    color: #f7f7f7f7;
+}
+.admin-util-container {
+  width: 117%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px -3rem;
+  overflow-y: scroll;
+  height: 9rem;
+  margin-right: 3rem;
+}
+
+.admin-util-container table td {
+  padding: 4px 0px;
+  color: black;
+}
+.admin-util-container table {
+  width: 41%;
+  margin-left: -9.6rem;
+  padding: 0 1rem;
+}
+.canvas {
+  box-sizing: border-box;
+    display: block;
+    height: 23rem;
+    width: 300px;
+}
+}

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { PAGES } from "../../pages/availablePages.js";
 import { PAGES1 } from "../../pages/availablePages.js";
-import getUserData from "../localStorage/localStorage";
+import getUserData from "../localStorage/localStorage.js";
 
 const Navbar = ({handleLogOut}) => {
   const { user, isVote } = getUserData(); 

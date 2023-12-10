@@ -18,13 +18,15 @@ a.navbar-brand{
 div.dropdown-menu.show{
   margin-left: 40rem;
 }
+
 a.dropdown-item:hover{
     background-color: black;
     color:#f7f7f7
 }
 nav.bg-body-tertiary.navbar.navbar-expand-lg.navbar-light{
     position: fixed;
-    padding:1rem 0
+    width: 100%;
+    height: 3rem;
 }
 div.container-fluid {
     background-color: #232229;

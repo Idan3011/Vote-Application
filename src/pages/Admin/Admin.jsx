@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import "../Admin/Admin.css";
 import axios from "../../apiConfig";
 import VoteChart from "../../component/Chart/Chart";
@@ -62,8 +62,8 @@ const Admin = () => {
     <div className="Admin page">
       <h1>Admin Control</h1>
       <div className="admin-util-container">
-          {data ? 
-        <table>
+        {data ? (
+          <table>
             {data.map((user, index) => {
               return (
                 <tbody key={index}>
@@ -80,10 +80,11 @@ const Admin = () => {
                   </tr>
                 </tbody>
               );
-            })
-          }
-        </table>:<Spinner />}
-
+            })}
+          </table>
+        ) : (
+          <Spinner />
+        )}
       </div>
       <div className="canvas-container">
         <VoteChart votes={votes} />

@@ -3,12 +3,12 @@ import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import "./App.css";
-import Navbar from "./component/Navbar/Navbar";
 import Voting from "./pages/Voting/Voting";
 import Login from "./pages/Login/Login";
 import Admin from "./pages/Admin/Admin";
 import getUserData from "./component/localStorage/localStorage";
-import NavBar1 from "./component/NavBar1/NavBar1";
+import AppNavBar from "./component/NavBar/AppNavBar";
+import './index.css'
 function App() {
   const { id } = getUserData();
   const [userId, setUserId] = useState(id);
@@ -29,8 +29,8 @@ function App() {
           <Route
             element={
               <>
-                {/* <Navbar handleLogOut={handleLogOut} /> */}
-                <NavBar1 />
+                <AppNavBar handleLogOut={handleLogOut} />
+                {/* <NavBar3 /> */}
                 <Outlet />
               </>
             }
