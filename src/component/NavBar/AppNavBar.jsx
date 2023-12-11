@@ -34,7 +34,7 @@ const AppNavBar = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
-        <Navbar.Brand href="#">Vote For your Vaforite Food!</Navbar.Brand>
+        <Navbar.Brand href="#">Vote For your Favorite Food!</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

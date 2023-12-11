@@ -15,6 +15,7 @@
 a.navbar-brand{
     margin-left:4rem;
 }
+
 div.dropdown-menu.show{
   margin-left: 40rem;
 }
@@ -37,7 +38,10 @@ div.container-fluid {
 div.container-fluid .navbar-brand{
     color:#f7f7f7f7
 }
-
+div.container-fluid .navbar-brand:hover{
+    color:goldenrod;
+    transform: scale(1.05);
+}
 a#navbarScrollingDropdown.dropdown-toggle.show.nav-link{
     color:#f7f7f7f7
 }
