@@ -77,9 +77,9 @@ const AppNavBar = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="/">LogOut</Nav.Link>
-                  <Nav.Link href="/pages/Voting/Voting">votes</Nav.Link>
-                  {isAdmin ? <Nav.Link href="/pages/Admin/Admin">Admin</Nav.Link> :null }
+                <NavLink to="/"> <Nav.Link href="/">LogOut</Nav.Link></NavLink>
+                <NavLink to="/pages/Voting/Voting"> <Nav.Link href="/pages/Voting/Voting">votes</Nav.Link></NavLink>
+                  {isAdmin ?<NavLink to='/pages/Admin/Admin'><Nav.Link href="/pages/Admin/Admin">Admin</Nav.Link></NavLink>  :null }
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

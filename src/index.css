@@ -2,6 +2,7 @@
   div.form-container {
     height: 36rem;
     padding: 0px;
+    margin-bottom: 13rem;
   }
   div.voting.page{
     display: flex;
@@ -53,4 +54,12 @@ div.offcanvas-header button.btn-close{
     height: 23rem;
     width: 300px;
 }
+div.justify-content-end.flex-grow-1.pe-3.navbar-nav a{
+  text-decoration: none;
+    color: #f7f7f7f7;
+    font-family: 'Cabin Sketch';
+    font-size: 1.4rem;
+    padding: 15px 1rem;
 }
+}
+
