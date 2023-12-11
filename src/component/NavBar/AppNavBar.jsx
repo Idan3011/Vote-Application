@@ -72,7 +72,7 @@ const AppNavBar = () => {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand`}>
-                Vote For your Vaforite Food!
+                Vote For your Favorite Food!
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
